@@ -2,7 +2,7 @@ import asyncHandler from "express-async-handler";
 import Dessert from "../models/dessertModel.js";
 
 
-const getDessert = asyncHandler(async (req, res) => {
+const getDesserts = asyncHandler(async (req, res) => {
   const desserts = await Dessert.find({});
   res.json(desserts);
 });
@@ -65,4 +65,4 @@ const updateDessert = asyncHandler(async (req, res) => {
   }
 });
 
-export { getDessert, getDessertById, deleteDessert, createDessert, updateDessert };
+export { getDesserts, getDessertById, deleteDessert, createDessert, updateDessert };

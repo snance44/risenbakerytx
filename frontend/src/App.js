@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HomeScreen from "./screens/HomeScreen";
 import PriceScreen from "./screens/PriceScreen";
+import PriceListScreen from "./screens/PriceListScreen";
 import ReviewScreen from "./screens/ReviewScreen";
 import ContactScreen from "./screens/ContactScreen";
 import AboutScreen from "./screens/AboutScreen";
@@ -14,6 +15,7 @@ import UserListScreen from "./screens/UserListScreen";
 import UserEditScreen from "./screens/UserEditScreen";
 import ProductListScreen from "./screens/ProductListScreen";
 import ProductEditScreen from "./screens/ProductEditScreen";
+import PriceEditScreen from "./screens/PriceEditScreen";
 import axios from "axios";
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 
@@ -49,6 +51,11 @@ const App = () => {
                   <Route path="/aboutus" element={<AboutScreen />} />
                   <Route path="/product/:id" element={<ProductScreen />} />
                   <Route path="/admin/userlist" element={<UserListScreen />} />
+                  <Route path="/admin/pricelist" element={<PriceListScreen />} />
+                  <Route
+                    path="/admin/price/:id/edit"
+                    element={<PriceEditScreen />}
+                  />
                   <Route
                     path="/admin/user/:id/edit"
                     element={<UserEditScreen />}
