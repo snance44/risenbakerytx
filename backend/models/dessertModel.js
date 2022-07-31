@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 
 
-const priceSchema = mongoose.Schema(
+const dessertSchema = mongoose.Schema(
   {
     user: {
       type: mongoose.Schema.Types.ObjectId,
@@ -28,6 +28,6 @@ const priceSchema = mongoose.Schema(
   }
 );
 
-const Price = mongoose.model("Price", priceSchema);
+const Dessert = mongoose.model("Dessert", dessertSchema);
 
-export default Price;
+export default Dessert;
