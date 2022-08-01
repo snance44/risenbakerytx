@@ -7,50 +7,28 @@ const AboutScreen = () => {
       <Container>
         <Row className="my-4">
           <Col xs={12} md={8}>
-            <h3>FAQ</h3>
+            <h3>Frequently Asked Questions: </h3>
             <Accordion>
               <Accordion.Item eventKey="0">
                 <Accordion.Header>
                   Will you bake items according to dietary restrictions?
                 </Accordion.Header>
                 <Accordion.Body>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
+                  Yes. We can make items for clients who have glutton-free, lactose-free, and other types of dietary restrictions. 
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item eventKey="1">
                 <Accordion.Header>
-                  What is the waiting period between putting in an order and the
-                  order's completion?
+                  How much time do you need to complete an order? 
                 </Accordion.Header>
                 <Accordion.Body>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
+                 We expect a 2 weeks notice miniumum. We may be able to rush orders for an extra fee, depending on current work load. 
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item eventKey="2">
-                <Accordion.Header>Accordion Item #3</Accordion.Header>
+                <Accordion.Header>When must payment be made for bigger orders?</Accordion.Header>
                 <Accordion.Body>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
+                  Half of the payment must be made upfront. The rest needs to be paid three days before order completion. 
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
@@ -66,8 +44,7 @@ const AboutScreen = () => {
                 <Card.Text>
                   My name is Erin Bowers and it's been my dream to open a
                   bakery. I never dreamed it would be so soon into life, but as
-                  God opened doors in my life, it seemed clear that I need to
-                  start pursuing my dreams.
+                  doors started opening, it seemed clear that I needed to pursue my dreams. 
                 </Card.Text>
               </Card.Body>
             </Card>

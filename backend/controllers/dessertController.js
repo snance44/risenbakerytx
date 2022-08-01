@@ -65,11 +65,7 @@ const updateDessert = asyncHandler(async (req, res) => {
   }
 });
 
-const getCakes = asyncHandler(async (req, res) => {
-  const cakes = await Dessert.find(req.params.category == 'Cakes')
-  res.json(cakes)
-  }
-);
 
 
-export { getDesserts, getDessertById, deleteDessert, createDessert, updateDessert, getCakes };
+
+export { getDesserts, getDessertById, deleteDessert, createDessert, updateDessert};

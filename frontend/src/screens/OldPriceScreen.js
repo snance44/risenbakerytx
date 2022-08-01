@@ -1,20 +1,17 @@
 import React, { useEffect } from "react";
-import { LinkContainer } from "react-router-bootstrap";
-import { useNavigate, useParams } from "react-router-dom";
 import { Table, Button, Row, Col } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "../components/Message";
 import Loader from "../components/Loader";
 import { listDesserts } from "../actions/dessertActions";
+import { Link } from "react-router-dom";
+import { LinkContainer } from "react-router-bootstrap";
 
-const NewPriceScreen = () => {
+
+const DessertListScreen = () => {
   const dispatch = useDispatch();
-
   const dessertList = useSelector((state) => state.dessertList);
   const { loading, error, desserts } = dessertList;
-
-
-  
 
   useEffect(() => {
     dispatch(listDesserts());
@@ -40,7 +37,7 @@ const NewPriceScreen = () => {
             </tr>
           </thead>
           <tbody>
-            {listDesserts.map((dessert) => (
+            {desserts.map((dessert) => (
               <tr key={dessert._id}>
                 <td>{dessert.name}</td>
                 <td>${dessert.price}</td>
@@ -50,8 +47,9 @@ const NewPriceScreen = () => {
           </tbody>
         </Table>
       )}
+ 
     </>
   );
 };
 
-export default NewPriceScreen;
+export default DessertListScreen;

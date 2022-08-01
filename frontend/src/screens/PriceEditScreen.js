@@ -100,15 +100,18 @@ const PriceEditScreen = () => {
 
             <Form.Group controlId="category" className="my-3">
               <Form.Label>Category</Form.Label>
-              <Form.Select aria-label="Default select example">
+              <Form.Select
+                aria-label="Default select example"
+                onChange={(e) => setCategory(e.target.value)}
+              >
                 <option>Pick a category</option>
-                <option value="cakes">Cakes</option>
-                <option value="cupcakes">Cupcakes</option>
-                <option value="breads">Breads</option>
-                <option value="cookies">Cookies</option>
-                <option value="parfaits">Parfaits</option>
-                <option value="jams">Jams</option>
-                <option value="other">Other</option>
+                <option value="Cakes">Cakes</option>
+                <option value="Cupcakes">Cupcakes</option>
+                <option value="Breads">Breads</option>
+                <option value="Cookies">Cookies</option>
+                <option value="Parfaits">Parfaits</option>
+                <option value="Jams">Jams</option>
+                <option value="Other">Other</option>
               </Form.Select>
             </Form.Group>
 

@@ -8,21 +8,17 @@ import PriceScreen from "./screens/PriceScreen";
 import PriceListScreen from "./screens/PriceListScreen";
 import ContactScreen from "./screens/ContactScreen";
 import AboutScreen from "./screens/AboutScreen";
-import ProductScreen from "./screens/ProductScreen";
+import RegisterScreen from "./screens/RegisterUserScreen";
 import LoginScreen from "./screens/LoginScreen";
 import UserListScreen from "./screens/UserListScreen";
 import UserEditScreen from "./screens/UserEditScreen";
-import ProductListScreen from "./screens/ProductListScreen";
-import ProductEditScreen from "./screens/ProductEditScreen";
+
 import PriceEditScreen from "./screens/PriceEditScreen";
-import NewPriceScreen from "./screens/NewPriceScreen";
+import NewPriceScreen from "./screens/PriceScreen";
 import PhotoScreen from "./screens/PhotoScreen";
 import PhotoListScreen from "./screens/PhotoListScreen";
 
-
 const App = () => {
-
-
   return (
     <>
       <Router>
@@ -37,23 +33,16 @@ const App = () => {
               <Route path="/admin/photolist" element={<PhotoListScreen />} />
               <Route path="/contactus" element={<ContactScreen />} />
               <Route path="/aboutus" element={<AboutScreen />} />
-              <Route path="/product/:id" element={<ProductScreen />} />
               <Route path="/admin/userlist" element={<UserListScreen />} />
+              <Route path="/admin/registeruser" element={<RegisterScreen />} />
               <Route path="/admin/pricelist" element={<PriceListScreen />} />
               <Route
                 path="/admin/price/:id/edit"
                 element={<PriceEditScreen />}
               />
               <Route path="/admin/user/:id/edit" element={<UserEditScreen />} />
-              <Route
-                path="/admin/productlist"
-                element={<ProductListScreen />}
-              />
-              <Route
-                path="/admin/product/:id/edit"
-                element={<ProductEditScreen />}
-              />
-              <Route path="/newpricescreen" element={<NewPriceScreen />} />
+              
+              <Route path="/newprices" element={<NewPriceScreen />} />
             </Routes>
           </Container>
         </main>
