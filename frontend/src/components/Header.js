@@ -35,10 +35,10 @@ const Header = () => {
                 </h6>
               </Nav.Link>
             </LinkContainer>
-            <LinkContainer to="/reviews" className="px-2">
+            <LinkContainer to="/photos" className="px-2">
               <Nav.Link>
                 <h6 style={{ color: "white" }} className="pt-2">
-                  Reviews
+                  Gallery
                 </h6>
               </Nav.Link>
             </LinkContainer>
@@ -84,6 +84,9 @@ const Header = () => {
                   </LinkContainer>
                   <LinkContainer to="/admin/pricelist">
                     <NavDropdown.Item>Price</NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer to="/admin/photolist">
+                    <NavDropdown.Item>Photos</NavDropdown.Item>
                   </LinkContainer>
                 </NavDropdown>
               )}

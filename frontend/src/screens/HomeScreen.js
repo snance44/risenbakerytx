@@ -7,13 +7,41 @@ function HomeScreen() {
 
   return (
     <Container>
-      <Row>
-        <Col className="bg-primary p-0">
+      <Row className="bg-primary">
+        <Col className="bg-primary">
           <h1 className="text-center">Welcome to Risen Bakery!</h1>
         </Col>
-        <Col className="bg-secondary p-0">
-          <h4 className="text-end p-">Welcome to Risen Bakery!</h4>
+        <Col>
+          <Row>
+            <Col className="bg-secondary m-0">
+              <h4 className="text-end">Risen Bakery</h4>
+            </Col>
+          </Row>
+          <Row>
+            <Col className="bg-secondary m-0">
+              <h6 className="text-end">
+                <a
+                  href={`mailto:erin@risenbakery.tx`}
+                  style={{ color: "white" }}
+                >
+                  erin@risenbakery.tx
+                </a>
+              </h6>
+            </Col>
+          </Row>
+          <Row>
+            <Col className="bg-secondary m-0">
+              <h6 className="text-end">
+                <a href={`tel:555-555-5555`} style={{ color: "white" }}>
+                  555-555-5555
+                </a>
+              </h6>
+            </Col>
+          </Row>
         </Col>
+      </Row>
+      <Row>
+        <Col></Col>
       </Row>
       <Row className="p-4">
         <Col>

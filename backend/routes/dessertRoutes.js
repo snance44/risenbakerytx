@@ -6,6 +6,7 @@ import {
   deleteDessert,
   createDessert,
   updateDessert,
+  getCakes,
 } from "../controllers/dessertController.js";
 import { protect, admin } from "../middleware/authMiddleware.js";
 
@@ -15,5 +16,6 @@ router
   .get(getDessertById)
   .delete(protect, admin, deleteDessert)
   .put(protect, admin, updateDessert);
+
 
 export default router;

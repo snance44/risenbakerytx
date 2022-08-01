@@ -8,7 +8,7 @@ import {
   productCreateReducer,
   productUpdateReducer,
 } from "./reducers/productReducers";
-import { cartReducer } from "./reducers/cartReducers";
+
 import {
   userLoginReducer,
   userRegisterReducer,
@@ -18,12 +18,7 @@ import {
   userDeleteReducer,
   userUpdateReducer,
 } from "./reducers/userReducers";
-import {
-  orderCreateReducer,
-  orderDetailsReducer,
-  orderPayReducer,
-  orderListMyReducer,
-} from "./reducers/orderReducers";
+
 import {
   dessertCreateReducer,
   dessertDeleteReducer,
@@ -31,6 +26,13 @@ import {
   dessertListReducer,
   dessertUpdateReducer,
 } from "./reducers/dessertReducers";
+import {
+  photoCreateReducer,
+  photoDeleteReducer,
+  photoDetailsReducer, 
+  photoListReducer, 
+  photoUpdateReducer
+} from './reducers/photoReducers';
 
 const reducer = combineReducers({
   productList: productListReducer,
@@ -43,7 +45,7 @@ const reducer = combineReducers({
   dessertDelete: dessertDeleteReducer,
   dessertCreate: dessertCreateReducer,
   dessertUpdate: dessertUpdateReducer,
-  cart: cartReducer,
+
   userLogin: userLoginReducer,
   userRegister: userRegisterReducer,
   userDetails: userDetailsReducer,
@@ -51,29 +53,19 @@ const reducer = combineReducers({
   userList: userListReducer,
   userDelete: userDeleteReducer,
   userUpdate: userUpdateReducer,
-  orderCreate: orderCreateReducer,
-  orderDetails: orderDetailsReducer,
-  orderPay: orderPayReducer,
-  orderListMy: orderListMyReducer,
+
 });
 
-const cartItemsFromStorage = localStorage.getItem("cartItems")
-  ? JSON.parse(localStorage.getItem("cartItems"))
-  : [];
+
 
 const userInfoFromStorage = localStorage.getItem("userInfo")
   ? JSON.parse(localStorage.getItem("userInfo"))
   : null;
 
-const shippingAddressFromStorage = localStorage.getItem("shippingAddress")
-  ? JSON.parse(localStorage.getItem("shippingAddress"))
-  : {};
+
 
 const initialState = {
-  cart: {
-    cartItems: cartItemsFromStorage,
-    shippingAddress: shippingAddressFromStorage,
-  },
+  
   userLogin: { userInfo: userInfoFromStorage },
 };
 

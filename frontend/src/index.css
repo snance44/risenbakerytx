@@ -2,6 +2,10 @@ main {
     min-height: 80vh;
 }
 
+m-body{
+    background-color: #E8EBE4;
+}
+
 h1{
     padding: 1rem 0;
     font-size: 2rem;
@@ -18,6 +22,3 @@ h3{
 }
 
 
-.rating span{
-    margin: 0.1rem;
-}

@@ -11,14 +11,14 @@ import { DESSERT_UPDATE_RESET } from "../constants/dessertConstants";
 
 const PriceEditScreen = () => {
   const navigate = useNavigate();
-  const location = useLocation();
+
   const params = useParams();
   const dessertId = params.id;
   const [name, setName] = useState("");
   const [price, setPrice] = useState(0);
   const [category, setCategory] = useState("");
   const [description, setDescription] = useState("");
-  const [uploading, setUploading] = useState(false);
+
 
   const dispatch = useDispatch();
 

@@ -16,6 +16,9 @@ import {
   DESSERT_UPDATE_SUCCESS,
   DESSERT_UPDATE_FAIL,
   DESSERT_UPDATE_RESET,
+  DESSERT_CAKE_REQUEST,
+  DESSERT_CAKE_SUCCESS,
+  DESSERT_CAKE_FAIL,
 } from "../constants/dessertConstants";
 
 export const dessertListReducer = (state = { desserts: [] }, action) => {
@@ -85,6 +88,19 @@ export const dessertUpdateReducer = (state = { dessert: {} }, action) => {
       return { loading: false, error: action.payload };
     case DESSERT_UPDATE_RESET:
       return { dessert: {} };
+    default:
+      return state;
+  }
+};
+
+export const dessertCakeReducer = (state = { desserts: [] }, action) => {
+  switch (action.type) {
+    case DESSERT_CAKE_REQUEST:
+      return { loading: true };
+    case DESSERT_CAKE_SUCCESS:
+      return { loading: false, desserts: action.payload };
+    case DESSERT_CAKE_FAIL:
+      return { loading: false, error: action.payload };
     default:
       return state;
   }

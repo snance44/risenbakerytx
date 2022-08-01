@@ -16,6 +16,9 @@ import {
   DESSERT_UPDATE_REQUEST,
   DESSERT_UPDATE_SUCCESS,
   DESSERT_UPDATE_FAIL,
+  DESSERT_CAKE_SUCCESS,
+  DESSERT_CAKE_REQUEST,
+  DESSERT_CAKE_FAIL,
 } from "../constants/dessertConstants";
 
 export const listDesserts = () => async (dispatch) => {
@@ -149,6 +152,29 @@ export const updateDessert = (dessert) => async (dispatch, getState) => {
   } catch (error) {
     dispatch({
       type: DESSERT_UPDATE_FAIL,
+      payload:
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message,
+    });
+  }
+};
+
+export const listCakes = () => async (dispatch) => {
+  try {
+    dispatch({
+      type: DESSERT_CAKE_REQUEST,
+    });
+
+    const { data } = await axios.post(`/api/desserts/cakes`);
+
+    dispatch({
+      type: DESSERT_CAKE_SUCCESS,
+      payload: data,
+    });
+  } catch (error) {
+    dispatch({
+      type: DESSERT_CAKE_FAIL,
       payload:
         error.response && error.response.data.message
           ? error.response.data.message
