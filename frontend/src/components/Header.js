@@ -35,13 +35,7 @@ const Header = () => {
                 </h6>
               </Nav.Link>
             </LinkContainer>
-            <LinkContainer to="/photos" className="px-2">
-              <Nav.Link>
-                <h6 style={{ color: "white" }} className="pt-2">
-                  Gallery
-                </h6>
-              </Nav.Link>
-            </LinkContainer>
+            
             <LinkContainer to="/contactus" className="px-2">
               <Nav.Link>
                 <h6 style={{ color: "white" }} className="pt-2">
@@ -63,23 +57,29 @@ const Header = () => {
                     <NavDropdown.Item>Users</NavDropdown.Item>
                   </LinkContainer>
                   <LinkContainer to="/admin/pricelist">
-                    <NavDropdown.Item>Price</NavDropdown.Item>
+                    <NavDropdown.Item>Prices</NavDropdown.Item>
                   </LinkContainer>
-                  <LinkContainer to="/admin/photolist">
-                    <NavDropdown.Item>Photos</NavDropdown.Item>
+                  <NavDropdown.Item onClick={logoutHandler}>
+                    Logout
+                  </NavDropdown.Item>
+                </NavDropdown>
+              ): userInfo ? (
+                <NavDropdown title={userInfo.name} id='username'>
+                  <LinkContainer to='/profile'>
+                    <NavDropdown.Item>Profile</NavDropdown.Item>
                   </LinkContainer>
                   <NavDropdown.Item onClick={logoutHandler}>
                     Logout
                   </NavDropdown.Item>
                 </NavDropdown>
               ) : (
-                <LinkContainer to="/login">
+                <LinkContainer to='/login'>
                   <Nav.Link>
-                    <i className="fas fa-user" />
-                    Sign In
+                    <i className='fas fa-user'></i> Sign In
                   </Nav.Link>
                 </LinkContainer>
               )}
+             
               
             </Nav>
           </Navbar.Collapse>

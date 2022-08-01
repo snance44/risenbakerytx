@@ -42,7 +42,7 @@ const AboutScreen = () => {
               <Card.Body>
                 <Card.Title>About Me</Card.Title>
                 <Card.Text>
-                  My name is Erin Bowers and it's been my dream to open a
+                  My name is Erin and it's been my dream to open a
                   bakery. I never dreamed it would be so soon into life, but as
                   doors started opening, it seemed clear that I needed to pursue my dreams. 
                 </Card.Text>

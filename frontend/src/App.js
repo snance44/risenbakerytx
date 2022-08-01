@@ -12,25 +12,20 @@ import RegisterScreen from "./screens/RegisterUserScreen";
 import LoginScreen from "./screens/LoginScreen";
 import UserListScreen from "./screens/UserListScreen";
 import UserEditScreen from "./screens/UserEditScreen";
-
 import PriceEditScreen from "./screens/PriceEditScreen";
-import NewPriceScreen from "./screens/PriceScreen";
-import PhotoScreen from "./screens/PhotoScreen";
-import PhotoListScreen from "./screens/PhotoListScreen";
+
 
 const App = () => {
   return (
     <>
       <Router>
         <Header />
-        <main className="py-3 m-body">
-          <Container>
+        <main className="m-body">
+          <Container className="py-3">
             <Routes>
               <Route path="/" element={<HomeScreen />} exact />
               <Route path="/login" element={<LoginScreen />} />
               <Route path="/prices" element={<PriceScreen />} />
-              <Route path="/photos" element={<PhotoScreen />} />
-              <Route path="/admin/photolist" element={<PhotoListScreen />} />
               <Route path="/contactus" element={<ContactScreen />} />
               <Route path="/aboutus" element={<AboutScreen />} />
               <Route path="/admin/userlist" element={<UserListScreen />} />
@@ -41,8 +36,6 @@ const App = () => {
                 element={<PriceEditScreen />}
               />
               <Route path="/admin/user/:id/edit" element={<UserEditScreen />} />
-              
-              <Route path="/newprices" element={<NewPriceScreen />} />
             </Routes>
           </Container>
         </main>

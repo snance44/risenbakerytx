@@ -53,7 +53,7 @@ const PriceScreen = () => {
   }, [dispatch]);
   return (
     <Container>
-      <Row className="justify-content-md-center">
+      <Row className="justify-content-md-center my-3">
         <Col xs={12} md={10}>
           <Row>
             <Col>

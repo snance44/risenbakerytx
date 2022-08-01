@@ -2,8 +2,12 @@ main {
     min-height: 80vh;
 }
 
-m-body{
-    background-color: #E8EBE4;
+.m-body{
+    background-color: #F8F5F2;
+}
+
+.banner{
+    background-color: aqua;
 }
 
 h1{
