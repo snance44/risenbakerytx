@@ -13,21 +13,21 @@ function HomeScreen() {
         </Col>
       </Row>
       <Row className="m-4">
-        <Col>
+        <Col xs={12} md={4} className="my-2">
           <img
             className="d-block w-100"
             src="../images/erin-pastelcake75.jpg"
             alt="First slide"
           />
         </Col>
-        <Col>
+        <Col xs={12} md={4} className="my-2">
           <img
             className="d-block w-100"
             src="../images/erin-plates75.jpg"
             alt="First slide"
           />
         </Col>
-        <Col>
+        <Col xs={12} md={4} className="my-2">
           <img
             className="d-block w-100"
             alt="First slide"
